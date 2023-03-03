@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MElemetModified.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="MainPage">
+
+
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid
+                Padding="0,10,0,0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="StartAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <toolkit:MediaElement
+                        x:Name="mediaElement"
+                        Grid.Row="0"
+                        Aspect="AspectFit"
+                        Background="Black"
+                        HeightRequest="300"
+                        HorizontalOptions="FillAndExpand"
+                        ShouldAutoPlay="True"
+                        ShouldShowPlaybackControls="True"
+                        Source="{Binding MediaSource}"
+                        VerticalOptions="Fill" />
+
+                    <ImageButton
+                        x:Name="btnFullScreen" Clicked="btnFullScreen_Clicked"
+                        Grid.Row="0"
+                        Margin="10"
+                        HeightRequest="40"
+                        HorizontalOptions="End"
+                        Source="iconfullscreen.png"
+                        VerticalOptions="Start"
+                        WidthRequest="40">
+                        <ImageButton.Behaviors>
+                            <toolkit:IconTintColorBehavior TintColor="White" />
+                        </ImageButton.Behaviors>
+                    </ImageButton>
+
+                    <!-- TO bind it with viewmodel prefer command
+                    Command="{Binding VideoTapCommand}"
+                        CommandParameter="{Binding Path=Position, Source={x:Reference mediaElement}}"-->
+                </Grid>
+            </Grid>
+
+        </Grid>
+
+    </ContentPage.Content>
+
+</ContentPage>
