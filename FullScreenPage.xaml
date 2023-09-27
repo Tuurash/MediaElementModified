@@ -1,81 +1,81 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Mopups:PopupPage
-    x:Class="MElemetModified.FullScreenPage"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:Animations="clr-namespace:Mopups.Animations;assembly=Mopups"
-    xmlns:Mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
-    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-    Title="FullScreenPage"
-    Shell.PresentationMode="ModalAnimated">
-    <Mopups:PopupPage.Animation>
-        <Animations:MoveAnimation PositionIn="Top" PositionOut="Top" />
-    </Mopups:PopupPage.Animation>
+	x:Class="MElemetModified.FullScreenPage"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:Animations="clr-namespace:Mopups.Animations;assembly=Mopups"
+	xmlns:Mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+	xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+	Title="FullScreenPage"
+	Shell.PresentationMode="ModalAnimated">
+	<Mopups:PopupPage.Animation>
+		<Animations:MoveAnimation PositionIn="Top" PositionOut="Top" />
+	</Mopups:PopupPage.Animation>
 
 
-    <Grid>
+	<Grid CompressedLayout.IsHeadless="True">
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-
-        <toolkit:MediaElement
-            x:Name="mediaElement"
-            Grid.Row="0"
-            Aspect="AspectFit"
-            Background="Black"
-            HorizontalOptions="FillAndExpand"
-            ShouldAutoPlay="True"
-            ShouldShowPlaybackControls="True"
-            VerticalOptions="FillAndExpand" />
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
 
 
-        <HorizontalStackLayout
-            Grid.Row="0"
-            Padding="15"
-            HorizontalOptions="StartAndExpand"
-            VerticalOptions="StartAndExpand">
+		<toolkit:MediaElement
+			x:Name="mediaElement"
+			Grid.Row="0"
+			Aspect="AspectFit"
+			Background="Black"
+			HorizontalOptions="FillAndExpand"
+			ShouldAutoPlay="True"
+			ShouldShowPlaybackControls="True"
+			VerticalOptions="FillAndExpand" />
 
-            <ImageButton
-                Margin="0,0,20,0"
-                Clicked="Button_Clicked"
-                HeightRequest="30"
-                HorizontalOptions="StartAndExpand"
-                Source="iconback.png"
-                WidthRequest="30">
-                <ImageButton.Behaviors>
-                    <toolkit:IconTintColorBehavior TintColor="White" />
-                </ImageButton.Behaviors>
-            </ImageButton>
 
-            <ImageButton
-                Margin="0,0,20,0"
-                Clicked="btnChangeAspect_Clicked"
-                HeightRequest="30"
-                HorizontalOptions="CenterAndExpand"
-                Source="iconaspect.png"
-                ToolTipProperties.Text="Change Aspect Ratio"
-                WidthRequest="30">
-                <ImageButton.Behaviors>
-                    <toolkit:IconTintColorBehavior TintColor="White" />
-                </ImageButton.Behaviors>
-            </ImageButton>
+		<HorizontalStackLayout
+			Grid.Row="0"
+			Padding="15"
+			HorizontalOptions="StartAndExpand"
+			VerticalOptions="StartAndExpand">
 
-            <ImageButton
-                Clicked="btnChangeOrientation_Clicked"
-                HeightRequest="30"
-                HorizontalOptions="EndAndExpand"
-                Source="iconorientation.png"
-                ToolTipProperties.Text="Change Orientation"
-                WidthRequest="30">
-                <ImageButton.Behaviors>
-                    <toolkit:IconTintColorBehavior TintColor="White" />
-                </ImageButton.Behaviors>
-            </ImageButton>
-        </HorizontalStackLayout>
+			<ImageButton
+				Margin="0,0,20,0"
+				Clicked="Button_Clicked"
+				HeightRequest="30"
+				HorizontalOptions="StartAndExpand"
+				Source="iconback.png"
+				WidthRequest="30">
+				<ImageButton.Behaviors>
+					<toolkit:IconTintColorBehavior TintColor="White" />
+				</ImageButton.Behaviors>
+			</ImageButton>
 
-    </Grid>
+			<ImageButton
+				Margin="0,0,20,0"
+				Clicked="btnChangeAspect_Clicked"
+				HeightRequest="30"
+				HorizontalOptions="CenterAndExpand"
+				Source="iconaspect.png"
+				ToolTipProperties.Text="Change Aspect Ratio"
+				WidthRequest="30">
+				<ImageButton.Behaviors>
+					<toolkit:IconTintColorBehavior TintColor="White" />
+				</ImageButton.Behaviors>
+			</ImageButton>
+
+			<ImageButton
+				Clicked="btnChangeOrientation_Clicked"
+				HeightRequest="30"
+				HorizontalOptions="EndAndExpand"
+				Source="iconorientation.png"
+				ToolTipProperties.Text="Change Orientation"
+				WidthRequest="30">
+				<ImageButton.Behaviors>
+					<toolkit:IconTintColorBehavior TintColor="White" />
+				</ImageButton.Behaviors>
+			</ImageButton>
+		</HorizontalStackLayout>
+
+	</Grid>
 
 
 </Mopups:PopupPage>

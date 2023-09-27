@@ -15,7 +15,9 @@ public partial class FullScreenPage : PopupPage
     public FullScreenPage(CurrentVideoState currentVideo)
     {
         Video = currentVideo;
+
         InitializeComponent();
+
         deviceOrientationService = new DeviceOrientationService();
         deviceOrientationService.SetDeviceOrientation(displayOrientation: DisplayOrientation.Landscape);
     }
@@ -36,12 +38,9 @@ public partial class FullScreenPage : PopupPage
 
     private void btnChangeAspect_Clicked(object sender, EventArgs e)
     {
-        if (mediaElement.Aspect == Aspect.AspectFit)
-            MainThread.BeginInvokeOnMainThread(() => mediaElement.Aspect = Aspect.Fill);
-        else if (mediaElement.Aspect == Aspect.Fill)
-            MainThread.BeginInvokeOnMainThread(() => mediaElement.Aspect = Aspect.Center);
-        else if (mediaElement.Aspect == Aspect.Center)
-            MainThread.BeginInvokeOnMainThread(() => mediaElement.Aspect = Aspect.AspectFit);
+        if (mediaElement.Aspect == Aspect.AspectFit) MainThread.InvokeOnMainThreadAsync(() => mediaElement.Aspect = Aspect.Fill);
+        else if (mediaElement.Aspect == Aspect.Fill) MainThread.InvokeOnMainThreadAsync(() => mediaElement.Aspect = Aspect.Center);
+        else if (mediaElement.Aspect == Aspect.Center) MainThread.InvokeOnMainThreadAsync(() => mediaElement.Aspect = Aspect.AspectFit);
     }
 
     private void btnChangeOrientation_Clicked(object sender, EventArgs e)
