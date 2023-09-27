@@ -3,7 +3,7 @@ using UIKit;
 
 namespace MElemetModified
 {
-    public class Program
+    public static class Program
     {
         // This is the main entry point of the application.
         static void Main(string[] args)

@@ -1,7 +1,6 @@
-﻿namespace MElemetModified.Services
+﻿namespace MElemetModified.Services;
+
+public partial class DeviceOrientationService
 {
-    public partial class DeviceOrientationService
-    {
-        public partial void SetDeviceOrientation(DisplayOrientation displayOrientation){}
-    }
+	public partial void SetDeviceOrientation(DisplayOrientation displayOrientation) { }
 }
