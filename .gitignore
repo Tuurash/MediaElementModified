@@ -1,0 +1,214 @@
+# ==== Visual Studio / .NET / IDE ignore rules ====
+
+# Visual Studio user-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.csproj.user
+*.vbproj.user
+*.sln.iml
+
+# Visual Studio IDE directories
+.vs/
+
+# VS Code / Rider / JetBrains / MonoDevelop
+.vscode/
+.idea/
+*.userprefs
+*.code-workspace
+
+# Resharper / Rider
+*.resharper
+*.resharper.user
+_ReSharper*/
+[Rr]e[Ss]harper
+.ReSharper.user
+
+# Code Analysis / StyleCop
+.dotCover
+.dotCoverUserState
+.ncrunch*
+*.ncrunch*_*
+riderModule.iml
+
+# ==== Build artifacts & intermediate files ====
+
+# Build results and directories
+[Bb]in/
+[Oo]bj/
+[Dd]ebug*/
+[Rr]elease*/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]uild/
+[Bb]uildLog.*
+
+# Visual Studio cache/options
+.vs/
+.vscode/
+
+# ==== NuGet & Package Management ====
+
+*.nupkg
+*.snupkg
+*.nuspec
+.nuget/
+/packages/
+/Package Recovery/
+
+# ==== .NET MAUI Platform-Specific ====
+
+# Platform-specific build outputs
+bin/Debug/net*-android/
+bin/Debug/net*-ios/
+bin/Debug/net*-maccatalyst/
+bin/Debug/net*-windows/
+bin/Debug/net*-tizen/
+bin/Release/net*-android/
+bin/Release/net*-ios/
+bin/Release/net*-maccatalyst/
+bin/Release/net*-windows/
+bin/Release/net*-tizen/
+
+obj/Debug/net*-android/
+obj/Debug/net*-ios/
+obj/Debug/net*-maccatalyst/
+obj/Debug/net*-windows/
+obj/Debug/net*-tizen/
+obj/Release/net*-android/
+obj/Release/net*-ios/
+obj/Release/net*-maccatalyst/
+obj/Release/net*-windows/
+obj/Release/net*-tizen/
+
+# ==== Android / Gradle ====
+
+# Android build artifacts
+*.apk
+*.apks
+*.aab
+*.ap_
+*.aar
+
+# Android NDK
+.ndkconfig
+local.properties
+gradle.properties
+
+# Keystore / signing
+*.keystore
+*.jks
+
+# Android Studio / Gradle
+.gradle/
+/android/.gradle/
+/android/local.properties
+/android/.idea/
+/android/*.iml
+/android/build/
+
+# ==== iOS / macOS ====
+
+# iOS/macOS build artifacts
+*.ipa
+*.app/
+*.dSYM/
+xcuser*.xcuserdatad/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# ==== Windows App Packaging ====
+
+# MSIX/AppPackage artifacts (if applicable)
+AppPackages/
+BundleArtifacts/
+*.msix
+*.msixbundle
+*.appxsym
+
+# ==== Logging & Diagnostics ====
+
+*.log
+*.logs
+*.psess
+*.vsp
+*.vspx
+*.gpState
+*.sap
+*.gid
+
+# ==== OS-Specific Files ====
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ==== Editor & Tool Artifacts ====
+
+*.swp
+*.swo
+*~
+*.swn
+.#*
+*.orig
+*.rej
+
+# ==== Temporary & Cache Files ====
+
+*.tmp
+*.temp
+*.cache
+*.pidb
+*.pidb.lock
+obj/**/temp/
+bin/**/temp/
+
+# ==== Environment & Secrets ====
+
+.env
+.env.local
+.env.*.local
+*.config.local
+*.secrets.json
+appsettings.*.json
+appsettings.Development.json
+
+# ==== Test & Coverage ====
+
+TestResults/
+[Cc]overage/
+[Cc]overageResults/
+[Oo]penCover/
+CodeCoverage/
+
+# ==== Distribution & Artifacts ====
+
+.dist/
+dist/
+publish/
+PublishProfiles/
+artifacts/
+releases/
+
+# ==== Misc Project-Specific ====
+
+# Snaps / experimental folders (if temp)
+Snaps/New\ Text\ Document.txt
+
+# Custom local development files
+*.local.*
+.vscode/launch.json
+.vscode/tasks.json
